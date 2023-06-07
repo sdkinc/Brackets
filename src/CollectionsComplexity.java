@@ -11,7 +11,9 @@ public class CollectionsComplexity {
 
   public static boolean checkBrackets(String brackets) {
     Deque<Character> openedBrackets = new ArrayDeque<>();
-
+    if(brackets.isEmpty()){
+      return true;
+    }
     for (int i = 0; i < brackets.length(); i++) {
       char c = brackets.charAt(i);
       switch (c) {
